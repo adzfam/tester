@@ -1,6 +1,7 @@
 from random import random
 import uuid
 import names
+import sqlite3
 f = names.get_first_name()
 #print(f)
 l = names.get_last_name()
@@ -11,9 +12,23 @@ for x in range(5):
  a = random()
 
  v[uuid.uuid1()] = {"firstname":f, "lastname":l,"age": a}
-print(v)
+#print(v)
+#-----------------------------------------
+conn = sqlite3.connect('tester.db')
+c = conn.cursor()
+#create table
+c.execute('''CREATE TABLE Tester
+            (ID, first name, last name, age)''')
+#insert row of data
+c.execute("INSERT INTO Tester VALUES (v)")
 
-columns = ', '.join("`" + str(x).replace('/', '_') + "`" for x in v.keys())
-values = ', '.join("'" + str(x).replace('/', '_') + "'" for x in v.values())
-sql = "INSERT INTO %s ( %s ) VALUES ( %s );" % ('mytable', columns, values)
-print(sql)
+
+#Save commit changes
+conn.commit()
+
+#close after saving
+c.close()
+conn.close()
+
+for row in c.execute('SELECT * FROM Tester ORDER BY first name'):
+        print(row)
