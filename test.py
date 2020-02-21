@@ -3,7 +3,7 @@ import uuid
 import names
 import sqlite3
 f = names.get_first_name()
-#print(f)
+
 l = names.get_last_name()
 v = {}
 for x in range(5):
