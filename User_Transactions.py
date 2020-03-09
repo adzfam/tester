@@ -60,6 +60,16 @@ class People:
         self.last = last
         self.age = age
         self.money = money
+        self.index = 0
+
+    def __iter__(self):
+        return self
+
+    def __next__(self):
+        if self.index >= len(self.):
+            raise StopIteration
+
+
 
 Person1 = People(f, l, age, 100)
 Person2 = People()
