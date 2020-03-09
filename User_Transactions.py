@@ -40,8 +40,32 @@ transactions = {"firstname":f,
                 "balance": 100,
 }
 
-
+for x in transactions:
+    print(transactions)
 #-----------------------------------------
+# class People:
+#     pass
+# Person1 = People()
+# Person2 = People()
+#
+# Person1.first = f
+# Person1.last = l
+# Person1.age = age
+# Person1.address = address
+# Person1.Money = 100
+#----------------
+class People:
+    def __init__(self, first, last, age, money):
+        self.first = first
+        self.last = last
+        self.age = age
+        self.money = money
+
+Person1 = People(f, l, age, 100)
+Person2 = People()
+
+print(People)
+#------------------------------------------
 # conn = sqlite3.connect('tester.db')
 # c = conn.cursor()
 # #create table
