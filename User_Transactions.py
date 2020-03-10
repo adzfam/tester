@@ -32,63 +32,48 @@ for x in v:
     print(v[x])
 
 # --------------------------------------------------------
-# Code for transactions & Money
-# Inventory for purchases
-inventory = {"apple": 10,
-             "banana": 20,
-             "water": 50,
-             "soap": 30,
-             }
-trans - []
-total = []
-
-
-
-def transaction():
-
-
-
-
-transactions = {"firstname": f,
-                "lastname": l,
-                "balance": 100,
+print("----------")
+# Code for Accounts and Transactions
+for _ in range(10):
+    accounts = {"firstname": f,
+                "last name": l,
+                "Balance": 100,
                 }
+    print(accounts)
 
-for x in transactions:
-    print(transactions)
 # -----------------------------------------
-# class People:
-#     pass
-# Person1 = People()
-# Person2 = People()
-#
-# Person1.first = f
-# Person1.last = l
-# Person1.age = age
-# Person1.address = address
-# Person1.Money = 100
-# #----------------
-# class People:
-#     def __init__(self, first, last, age, money):
-#         self.first = first
-#         self.last = last
-#         self.age = age
-#         self.money = money
-#         self.index = 0
-#
-#     def __iter__(self):
-#         return self
-#
-#     def __next__(self):
-#         if self.index >= len(self.):
-#             raise StopIteration
-#
-#
-#
-# Person1 = People(f, l, age, 100)
-# Person2 = People()
-#
-# print(People)
+class People:
+    pass
+Person1 = People()
+Person2 = People()
+
+Person1.first = f
+Person1.last = l
+Person1.age = age
+Person1.address = address
+Person1.Money = 100
+#----------------
+class People:
+    def __init__(self, first, last, age, money):
+        self.first = first
+        self.last = last
+        self.age = age
+        self.money = money
+        self.index = 0
+
+    def __iter__(self):
+        return self
+
+    def __next__(self):
+        if self.index >= len(self.):
+            raise StopIteration
+
+
+
+Person1 = People(f, l, age, 100)
+Person2 = People()
+
+print(People)
 # #------------------------------------------
 #
 # #------------------------------------------

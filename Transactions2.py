@@ -20,9 +20,11 @@ for _ in range(5):
     id = uuid.uuid1()
     users = [id, f, l, age, t]
     new = {}
-    for i in range(5):
+    for i in range(1):
         new[keys[i]] = users
+        print(users)
         print(new)
+#How do i make this one big dictionary instead of multiple dicts
 print(new)
 # ---------------------------------------
 #new ] {" "}
